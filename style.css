@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+    --bg-color: #f0f4f8;
+    --text-color: #1a202c;
+    --accent-color: #2b6cb0;
+    --input-bg: rgba(43, 108, 176, 0.1);
+}
+
+.dark-mode {
+    --bg-color: #1a202c;
+    --text-color: #f0f4f8;
+    --accent-color: #63b3ed;
+    --input-bg: rgba(99, 179, 237, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.main {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .image-container {
+    padding: 20px;
+    background: var(--input-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.main .image-container .image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .image-container .image img {
+    width: 250px;
+    height: 250px;
+    margin: 1.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main .image-container h1 {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main .image-container p {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    max-width: 400px;
+    height: 60px;
+    border-radius: 30px;
+    background: var(--input-bg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main .input .talk {
+    background: var(--accent-color);
+    outline: none;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main .input .talk:hover {
+    transform: scale(1.1);
+}
+
+.main .input .talk i {
+    color: var(--bg-color);
+}
+
+.main .input .content {
+    color: var(--text-color);
+    font-size: 18px;
+    margin-left: 20px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    border: none;
+    color: var(--bg-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.mode-toggle:hover {
+    transform: scale(1.05);
+}
